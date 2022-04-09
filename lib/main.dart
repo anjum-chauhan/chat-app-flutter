@@ -170,23 +170,19 @@ class _MyHomePageState extends State<MyHomePage> {
             Expanded(
               flex: 8,
               child: Container(
-                padding:
-                    const EdgeInsets.only(left: 8, right: 8, bottom: 8, top: 0),
-                child: Card(
-                  margin: const EdgeInsets.only(bottom: 8),
-                  elevation: 5,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15)),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 8, right: 8),
-                    child: TextField(
-                      decoration: const InputDecoration(
-                        contentPadding: EdgeInsets.all(12),
-                        hintText: 'Type your messages here...',
-                      ),
-                      controller: _controller,
-                    ),
+                margin: const EdgeInsets.only(left: 8),
+                child: TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    contentPadding: const EdgeInsets.all(12),
+                    hintText: 'Type your messages here...',
+                    border: OutlineInputBorder(
+                      borderSide: const BorderSide(width: 0),
+                      gapPadding: 10,
+                      borderRadius: BorderRadius.circular(25),
+                    )
                   ),
+                  controller: _controller,
                 ),
               ),
             ),
